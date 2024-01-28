@@ -9,7 +9,6 @@ alias notes="/System/Applications/Notes.app/Contents/MacOS/Notes &"
 alias julia="/Applications/Julia-1.2.app/Contents/Resources/julia/bin/julia"
 alias jl='jupyter lab'
 alias fiji="/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
-alias bishop="open /Users/oroville/Documents/textbooks/Bishop_PRML.pdf &"
 alias l="ls -lah"
 alias ls="ls -lh"
 alias c="cd"
@@ -32,7 +31,7 @@ alias keynote="/Applications/Keynote.app/Contents/MacOS/Keynote &"
 
 alias rats="matlab -r "training_report""
 alias fetchwtresults="rsync jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
-/Users/oroville/projects/waiting/results/"
+$HOME/projects/waiting/results/"
 
 # git alias for dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -58,14 +57,14 @@ alias gd="git diff"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/tyler/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/tyler/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/tyler/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/tyler/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
