@@ -11,3 +11,7 @@ try
   source ~/.vim_runtime/my_configs.vim
 catch
 endtry
+
+" Latex key binding
+" Compile tex file by pressing control T 
+autocmd FileType tex nmap <buffer> <C-T> :!latexmk -pdf %<CR>

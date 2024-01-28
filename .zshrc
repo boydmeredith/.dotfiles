@@ -7,6 +7,7 @@ alias gmail="open -a \"Google Chrome\" https://gmail.com"
 alias vscode="open -a \"Visual Studio Code\""
 alias notes="/System/Applications/Notes.app/Contents/MacOS/Notes &"
 alias julia="/Applications/Julia-1.2.app/Contents/Resources/julia/bin/julia"
+alias skim="open -a \"Skim\""
 alias jl='jupyter lab'
 alias fiji="/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
 alias l="ls -lah"
