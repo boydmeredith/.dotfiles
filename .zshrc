@@ -31,9 +31,9 @@ alias matlab="open -a \"MATLAB_R2022b\""
 alias keynote="/Applications/Keynote.app/Contents/MacOS/Keynote &"
 
 # Sync data and results for waiting project
-alias fetchwtresults="rsync -avz --progress jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
+alias fetch-wt-results="rsync -avz --progress jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
 $HOME/projects/waiting/results/"
-alias syncwtdata="rsync -avz --progress $HOME/projects/waiting/data/* jtb3@scotty.princeton.edu:/jukebox/brody/projects/waiting/data/ --exclude=archive --exclude=""example*"""
+alias push-wt-data="rsync -avz --progress $HOME/projects/waiting/data/* jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/data/ --exclude=archive --exclude='example*'"
 
 # git alias for dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
