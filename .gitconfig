@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Tyler Boyd-Meredith
 	email = jboydmeredith@gmail.com
+[pull]
+	rebase = false

@@ -30,9 +30,10 @@ alias matlab="/Applications/MATLAB_R2022b.app/bin/matlab -nosplash "
 alias matlab="open -a \"MATLAB_R2022b\""
 alias keynote="/Applications/Keynote.app/Contents/MacOS/Keynote &"
 
-alias rats="matlab -r "training_report""
-alias fetchwtresults="rsync jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
+# Sync data and results for waiting project
+alias fetchwtresults="rsync -avz --progress jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
 $HOME/projects/waiting/results/"
+alias syncwtdata="rsync -avz --progress $HOME/projects/waiting/data/* jtb3@scotty.princeton.edu:/jukebox/brody/projects/waiting/data/ --exclude=archive --exclude=""example*"""
 
 # git alias for dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -72,5 +73,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 export LD_LIBRARY_PATH=$HOME/.julia/conda/3/lib:$LD_LIBRARY_PATH
 
-alias load-project="source ~/load_project.sh"
+alias load-project="source ~/.load_project.sh"
 alias open_github="open $github"
