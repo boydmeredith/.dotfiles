@@ -5,8 +5,9 @@ export CVSROOT=:ext:brodylab@brodylab.princeton.edu/cvs
 alias chrome="open -a \"Google Chrome\""
 alias gmail="open -a \"Google Chrome\" https://gmail.com"
 alias vscode="open -a \"Visual Studio Code\""
-alias notes="/System/Applications/Notes.app/Contents/MacOS/Notes &"
-alias julia="/Applications/Julia-1.2.app/Contents/Resources/julia/bin/julia"
+alias notes="open -a /System/Applications/Notes.app"
+alias slack="open -a /Applications/Slack.app"
+alias spotify="open -a /Applications/Spotify.app"
 alias skim="open -a \"Skim\""
 alias jl='jupyter lab'
 alias fiji="/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
@@ -28,12 +29,14 @@ alias sshswc="ssh tylerbm@ssh.swc.ucl.ac.uk"
 
 alias matlab="/Applications/MATLAB_R2022b.app/bin/matlab -nosplash "
 alias matlab="open -a \"MATLAB_R2022b\""
+alias logseq="open -a \"/Applications/Logseq.app\""
 alias keynote="/Applications/Keynote.app/Contents/MacOS/Keynote &"
 
 # Sync data and results for waiting project
-alias fetch-wt-results="rsync -avz --progress jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/*
-$HOME/projects/waiting/results/"
+alias fetch-wt-results="rsync -avz --progress jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/ $HOME/projects/waiting/results/"
 alias push-wt-data="rsync -avz --progress $HOME/projects/waiting/data/* jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/data/ --exclude=archive --exclude='example*'"
+
+alias push-wt-results="rsync -avz --progress $HOME/projects/waiting/results/* jtb3@scotty.princeton.edu:/jukebox/brody/jtb3/projects/waiting/results/ "
 
 # git alias for dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -74,4 +77,15 @@ unset __conda_setup
 export LD_LIBRARY_PATH=$HOME/.julia/conda/3/lib:$LD_LIBRARY_PATH
 
 alias load-project="source ~/.load_project.sh"
+alias create-new-project="source ~/.create_new_project.sh"
+alias start-workday="open -a /Applications/Microsoft\ Outlook.app; open -a /Applications/Slack.app; cd projects; ls"
 alias open_github="open $github"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/tyler/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
